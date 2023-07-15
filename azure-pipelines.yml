@@ -25,6 +25,8 @@ steps:
     # Upload the summary file
     ls -al
     echo "##vso[task.uploadsummary]$(Build.SourcesDirectory)/summary.md"
+    echo "##vso[task.uploadsummary]$(Build.SourcesDirectory)/summary-test.md"
+    echo "##vso[task.uploadsummary]$(Build.SourcesDirectory)/report.html"
   displayName: 'Run a multi-line script'
 
 - task: publishhtmlreport@1
