@@ -18,14 +18,13 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
-    ls -al
-
     # Generate summary report
     summaryContent="This is a summary report."
     echo "$summaryContent" > summary.md
 
     # Upload the summary file
-    echo "##vso[task.uploadsummary]$(Build.ArtifactStagingDirectory)/summary.md"
+    ls -al
+    echo "##vso[task.uploadsummary]$(Build.SourcesDirectory)/summary.md"
   displayName: 'Run a multi-line script'
 
 - task: publishhtmlreport@1
