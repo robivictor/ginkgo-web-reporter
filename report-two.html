@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Sample</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .report-header {
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-bottom: 1px solid #dee2e6;
+    }
+
+    .report-content {
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="report-header">
+      <h1>Monthly Report</h1>
+      <p>Date: July 2023</p>
+    </div>
+
+    <div class="report-content">
+      <h2>Summary</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id aliquet erat. Sed euismod ultricies urna
+        sit amet ultrices. Nulla facilisi. Mauris id urna a neque pulvinar semper.</p>
+
+      <h2>Data Analysis</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Category 1</td>
+                <td>$100</td>
+              </tr>
+              <tr>
+                <td>Category 2</td>
+                <td>$200</td>
+              </tr>
+              <tr>
+                <td>Category 3</td>
+                <td>$300</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-md-6">
+          <canvas id="chart"></canvas>
+        </div>
+      </div>
+
+      <h2>Conclusion</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id aliquet erat. Sed euismod ultricies urna
+        sit amet ultrices. Nulla facilisi. Mauris id urna a neque pulvinar semper.</p>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Chart Data
+    var ctx = document.getElementById('chart').getContext('2d');
+    var chart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Category 1', 'Category 2', 'Category 3'],
+        datasets: [{
+          label: 'Amount',
+          data: [100, 200, 300],
+          backgroundColor: '#007bff',
+          borderColor: '#007bff',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
