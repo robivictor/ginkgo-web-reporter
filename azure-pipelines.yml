@@ -24,4 +24,4 @@ steps:
 - task: publishhtmlreport@1
   inputs:
     htmlType: 'genericHTML'
-    htmlPath: './report.html'
+    htmlPath: '$(Build.SourcesDirectory)/report.html'
